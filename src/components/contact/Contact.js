@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import ErrorMessage from "./ErrorMessage";
 
 const schema = yup.object().shape({
 	firstName: yup.string().required("First name is required"),
@@ -32,19 +33,19 @@ function Contact() {
             <Form.Group>
                 <Form.Label>Name</Form.Label>
                 <Form.Control name="firstName" placeholder="Enter your name" ref={register} />
-                {errors.firstName && <p>{errors.firstName.message}</p>}
+                {errors.firstName && <ErrorMessage>{errors.firstName.message}</ErrorMessage>}
             </Form.Group>
 
             <Form.Group>
                 <Form.Label>Email</Form.Label>
                 <Form.Control name="email" placeholder="Enter your email" ref={register} />
-                {errors.email && <p>{errors.email.message}</p>}
+                {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
             </Form.Group>
 
             <Form.Group>
                 <Form.Label>Age</Form.Label>
                 <Form.Control type="number" name="age" defaultValue="10" placeholder="Enter your age" ref={register} />
-                {errors.age && <p>{errors.age.message}</p>}
+                {errors.age && <ErrorMessage>{errors.age.message}</ErrorMessage>}
             </Form.Group>
 
             <Button type="submit">Submit</Button>
