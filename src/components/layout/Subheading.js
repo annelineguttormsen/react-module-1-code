@@ -8,7 +8,7 @@ function Subheading({ heading }) {
 }
 
 Subheading.propTypes = {
-	children: PropTypes.string.isRequired
+	heading: PropTypes.string.isRequired
 };
 
 export default Subheading;
