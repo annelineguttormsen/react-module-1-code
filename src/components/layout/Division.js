@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Division(props) {
 
@@ -6,5 +7,10 @@ function Division(props) {
 
 	return <div>{answer}</div>;
 }
+
+Division.propTypes = {
+    firstNumber: PropTypes.number.isRequired,
+    secondNumber: PropTypes.number.isRequired
+};
 
 export default Division;
