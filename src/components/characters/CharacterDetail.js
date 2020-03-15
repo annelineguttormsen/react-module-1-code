@@ -20,7 +20,7 @@ function CharacterDetail() {
 			.then(json => setDetail(json))
 			.catch(error => console.log(error))
 			.finally(() => setLoading(false));
-	}, []);
+	}, [url]);
 
 	if (loading) {
 		return <Spinner animation="border" className="spinner" />;
