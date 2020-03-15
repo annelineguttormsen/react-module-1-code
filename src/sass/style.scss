@@ -1,6 +1,10 @@
 @import "partials/_variables";
 @import "partials/_characters";
 
+.container {
+	padding-top: 30px;
+}
+
 .layout {
 	width: 100%;
 	max-width: 800px;

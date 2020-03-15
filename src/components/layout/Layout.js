@@ -7,6 +7,7 @@ import Home from "../home/Home";
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import SliderContainer from "../slider/SliderContainer";
+import CharacterDetail from "../characters/CharacterDetail";
 
 function Layout() {
 	return (
@@ -39,7 +40,7 @@ function Layout() {
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
 					<Route path="/slider" component={SliderContainer} />
-					<Route path="/character" component={SliderContainer} />
+					<Route path="/character/:id" component={CharacterDetail} />
 				</Switch>
 			</Container>
 		</Router>
