@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Double(props) {
 	// set the value of the answer variable to be the value of the number prop
@@ -11,5 +12,10 @@ function Double(props) {
 
 	return <div className="answer">{answer}</div>;
 }
+
+Double.propTypes = {
+	number: PropTypes.number.isRequired
+};
+
 
 export default Double;
