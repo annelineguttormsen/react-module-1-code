@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Spinner from "react-bootstrap/Spinner";
-import { BASE_URL } from "../../../constants/api";
+import { BASE_URL } from "../../constants/api";
 
 function CharacterList() {
     const [characters, setCharacters] = useState([]);
